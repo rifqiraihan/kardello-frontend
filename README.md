@@ -45,8 +45,6 @@ git clone https://github.com/yourusername/kardello-frontend.git
 cd kardello-frontend
 
 Install dependencies
-npm install
-# or
 pnpm install
 
 Configure Environment Variables
@@ -54,7 +52,5 @@ Create a .env file in the root of your project with the following content:
 NEXT_PUBLIC_API_URL=http://localhost:8080
 
 For development, run:
-npm run dev
-# or
 pnpm dev
 

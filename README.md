@@ -1,8 +1,8 @@
-Kardello Frontend
+## Kardello Frontend
 
 This is the frontend for the Kardelo application, a Trello clone built using Next.js, React, and TypeScript. The app allows users to manage tasks, replies, and their user profiles in a Trello-like environment with drag-and-drop functionality for task management. The core features are fully functional, including task and reply management, but the application is still under development, with ongoing improvements to ensure a smooth experience on mobile devices.
 
-Features in Detail
+## Features in Detail
 
 User Authentication
 Register: New users can sign up by providing their email and password.

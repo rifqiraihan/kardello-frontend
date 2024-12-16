@@ -1,36 +1,56 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+## Kardello Frontend
 
-## Getting Started
+This is the frontend for the Kardelo application, a Trello clone built using Next.js, React, and TypeScript. The app allows users to manage tasks, replies, and their user profiles in a Trello-like environment with drag-and-drop functionality for task management. The core features are fully functional, including task and reply management, but the application is still under development, with ongoing improvements to ensure a smooth experience on mobile devices.
 
-First, run the development server:
+## Features in Detail
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
+User Authentication
+Register: New users can sign up by providing their email and password.
+Login: Existing users can log in with their email and password.
+JWT Authentication: Once logged in, users will receive a JSON Web Token (JWT) to be used for making authenticated requests.
+
+Task Management
+Create Task: Logged-in users can create new tasks by providing a title, description, and other details.
+Edit Task: Users can edit existing tasks, updating their details.
+Delete Task: Tasks can be deleted by their creator.
+View Tasks: Tasks are displayed in a Trello-like board with different lists and columns.
+Drag-and-Drop: Tasks can be reorganized by dragging and dropping task cards between different lists or columns. This allows users to easily prioritize or categorize tasks by simply dragging them.
+
+Reply Management
+Create Reply: Logged-in users can create replies on tasks to provide comments or updates.
+Edit Reply: Users can edit their replies to update or correct any information.
+Delete Reply: Replies can be deleted by the user who created them.
+Role-based Permissions
+Only logged-in users can perform task and reply operations. Anonymous users can only view tasks and replies.
+
+Drag-and-Drop Task Management
+We use React Beautiful DnD to implement drag-and-drop functionality for task cards. Users can easily move tasks between different columns or lists by clicking and dragging them. This feature provides a smooth and intuitive user experience for organizing tasks.
+
+API Integration
+The frontend communicates with the backend via tRPC for type-safe API calls.
+
+## Tech Stack
+
+- **Next.js**: React framework for building server-rendered applications.
+- **React**: JavaScript library for building user interfaces.
+- **TypeScript**: Static typing for safer, more maintainable code.
+- **tRPC**: Type-safe API client and server integration.
+- **Prisma**: ORM for interacting with the PostgreSQL database.
+- **JWT**: Authentication using JSON Web Tokens.
+- **TailwindCSS**: Utility-first CSS framework for fast UI development.
+- **React Beautiful DnD**: Library for implementing drag-and-drop functionality in React.
+
+Clone the repository
+git clone https://github.com/yourusername/kardello-frontend.git
+cd kardello-frontend
+
+Install dependencies
+pnpm install
+
+Configure Environment Variables
+Create a .env file in the root of your project with the following content:
+NEXT_PUBLIC_API_URL=http://localhost:8080
+
+For development, run:
 pnpm dev
-# or
-bun dev
-```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
